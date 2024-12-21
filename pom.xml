@@ -58,6 +58,7 @@
 	</dependencies>
 
 	<build>
+	 	<finalName>cicd-example</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
