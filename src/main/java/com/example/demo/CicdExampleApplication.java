@@ -6,6 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.WebApplicationContext;
 
 @RestController
 @SpringBootApplication
@@ -25,6 +26,11 @@ public class CicdExampleApplication  extends SpringBootServletInitializer {
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(CicdExampleApplication.class);
     }
+    
+	@Override
+	protected WebApplicationContext run(SpringApplication application) {
+		return super.run(application);
+	}
 	
 	public static void main(String[] args) {
 		SpringApplication.run(CicdExampleApplication.class, args);
