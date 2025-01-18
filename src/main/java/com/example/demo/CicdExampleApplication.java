@@ -22,6 +22,7 @@ public class CicdExampleApplication  extends SpringBootServletInitializer {
 		return "Welcome";
 	}
 	
+	//webhook 테스트
 	@GetMapping("/notice")
 	public String notice() {
 		return "notice list";
