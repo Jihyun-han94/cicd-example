@@ -22,6 +22,11 @@ public class CicdExampleApplication  extends SpringBootServletInitializer {
 		return "Welcome";
 	}
 	
+	@GetMapping("/notice")
+	public String notice() {
+		return "notice list";
+	}
+	
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(CicdExampleApplication.class);
